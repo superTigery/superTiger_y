@@ -549,26 +549,26 @@ export default class InitGraph {
     const { graph } = this;
     const container = document.getElementById('container');
 
-    // const reset = () => {
-    //   graph.drawBackground({ color: '#fff' });
-    //   const nodes = graph.getNodes();
-    //   const edges = graph.getEdges();
+    const reset = () => {
+      graph.drawBackground({ color: '#fff' });
+      const nodes = graph.getNodes();
+      const edges = graph.getEdges();
 
-    //   nodes.forEach((node) => {
-    //     node.attr('body/stroke', '#000');
-    //   });
+      nodes.forEach((node) => {
+        node.attr('body/stroke', '#000');
+      });
 
-    //   edges.forEach((edge) => {
-    //     edge.attr('line/stroke', 'black');
-    //     edge.prop('labels/0', {
-    //       attrs: {
-    //         body: {
-    //           stroke: 'black',
-    //         },
-    //       },
-    //     });
-    //   });
-    // };
+      edges.forEach((edge) => {
+        edge.attr('line/stroke', 'black');
+        edge.prop('labels/0', {
+          attrs: {
+            body: {
+              stroke: 'black',
+            },
+          },
+        });
+      });
+    };
     graph.on('node:contextmenu', ({ cell, view }) => {
       const oldText = cell.attr('text/textWrap/text');
       const elem = view.container.querySelector('.x6-edit-text');
