@@ -310,17 +310,17 @@ export default class InitGraph {
       shape: 'flow-chart-animate-text',
     });
 
-    // const g1 = graph.createNode({
-    //   shape: 'groupNode',
-    //   attrs: {
-    //     text: {
-    //       text: 'Group Name',
-    //     },
-    //   },
-    //   data: {
-    //     parent: true,
-    //   },
-    // });
+    const g1 = graph.createNode({
+      shape: 'groupNode',
+      attrs: {
+        text: {
+          text: 'Group Name',
+        },
+      },
+      data: {
+        parent: true,
+      },
+    });
 
     const weChatTemplate = graph.createNode({
       width: 48,
@@ -533,7 +533,7 @@ export default class InitGraph {
     this.stencil.load([start, wait, concat, end], 'action');
     this.stencil.load([weChatTemplate, weChatText, message], 'action1');
     this.stencil.load([c1, c2, c3], 'combination');
-    this.stencil.load([c1], 'group');
+    this.stencil.load([g1], 'group');
   }
   // 画布数据
   static initGraphShape() {
