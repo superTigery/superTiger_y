@@ -533,7 +533,7 @@ export default class InitGraph {
     this.stencil.load([start, wait, concat, end], 'action');
     this.stencil.load([weChatTemplate, weChatText, message], 'action1');
     this.stencil.load([c1, c2, c3], 'combination');
-    this.stencil.load([], 'group');
+    this.stencil.load([c1], 'group');
   }
   // 画布数据
   static initGraphShape() {
