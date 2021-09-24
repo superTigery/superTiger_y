@@ -1,0 +1,49 @@
+.disabledButton() {
+  &[disabled],
+  &[disabled]:hover {
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+  }
+}
+
+.ant-btn {
+  &:not(.ant-btn-link) {
+    .disabledButton();
+
+    width: 78px;
+    border: 1px solid #e2e6e9;
+    border-radius: 2px;
+  }
+
+  &.ant-btn-link {
+    border-color: transparent;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &.ant-btn-primary {
+    .disabledButton();
+
+    background-color: @primary-color;
+    border-color: @primary-color;
+
+    &:hover {
+      background-color: rgba(@primary-color, 0.7);
+      border-color: rgba(@primary-color, 0.7);
+    }
+  }
+}
+
+.ant-picker,
+.ant-select-selector,
+.ant-input-affix-wrapper {
+  border: 1px solid @border-color !important;
+}
+
+.ant-table {
+  .ant-table-thead > tr > th {
+    color: @text-color;
+    background: #f7f9fa;
+  }
+}

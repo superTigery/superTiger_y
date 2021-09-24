@@ -1,0 +1,89 @@
+
+@import url('./cover-antd.less');
+
+html,
+input,
+button,
+textarea,
+select {
+  font-family: Roboto, Microsoft Yahei, Helvetica Neue, sans-serif;
+}
+
+.cc-dropdown-overlay {
+  .ant-dropdown-menu {
+    width: 80px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.14);
+    opacity: 1;
+
+    .ant-dropdown-menu-item {
+      height: 32px;
+      padding: 0;
+      text-align: center;
+      &:hover {
+        background: rgba(@primary-color, 0.06);
+      }
+      .ant-btn {
+        color: @text-color;
+      }
+    }
+  }
+}
+
+.cc-form {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  &-body {
+    flex: 1;
+  }
+
+  &-footer {
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0 1px 0 0 @border-color inset;
+
+    .ant-btn {
+      width: 88px;
+      height: 36px;
+      font-size: 13px;
+      line-height: 1;
+    }
+  }
+
+  .form-item__prefix-icon {
+    position: absolute;
+    top: 8px;
+    left: -18px;
+    color: #858d95;
+  }
+
+  .ant-form-item-label {
+    padding-right: 16px;
+    > label {
+      color: @text-color-dark;
+    }
+  }
+
+  .ant-input-textarea-show-count {
+    &::after {
+      position: absolute;
+      right: 8px;
+      bottom: 2px;
+      z-index: 2;
+      margin-bottom: auto;
+      color: #919da3;
+      font-size: 10px;
+    }
+  }
+
+  .ant-radio-wrapper {
+    margin-right: 48px;
+  }
+
+  .ant-radio {
+    transform: translateY(1px);
+  }
+}

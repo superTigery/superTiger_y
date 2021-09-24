@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "./",
+    "strict": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["mock/**/*", "src/**/*", "config/**/*", ".umirc.js"],
+  "exclude": ["node_modules", "**/__test__"]
+}
