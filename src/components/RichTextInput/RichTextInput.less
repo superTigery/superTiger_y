@@ -1,0 +1,67 @@
+.wrapper {
+  border: 1px solid red;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.wrapper :global {
+  .bf-content,
+  .public-DraftEditorPlaceholder-inner {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .param-item {
+    box-sizing: border-box;
+    position: relative;
+    top: -2px;
+    padding: 4px 8px;
+    background: #f9f9f9;
+    border: 1px solid #efefef;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: default;
+    display: inline-block;
+    margin: 0 8px;
+  }
+
+  .public-DraftStyleDefault-block .param-item:first-child {
+    margin-left: 0;
+  }
+}
+
+.singleLine :global {
+  .bf-content * {
+    line-height: inherit;
+  }
+
+  .bf-container {
+    .DraftEditor-editorContainer {
+      height: 30px;
+      overflow: hidden;
+    }
+    .public-DraftEditor-content {
+      padding: 6px 11px;
+
+      > div {
+        overflow: hidden;
+      }
+    }
+
+    .public-DraftStyleDefault-block {
+      white-space: nowrap;
+    }
+  }
+
+  .public-DraftStyleDefault-block {
+    line-height: 1;
+  }
+
+  .param-item {
+    top: 0;
+  }
+}
+
+.hiddenControlbar {
+  display: none;
+}

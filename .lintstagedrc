@@ -1,0 +1,11 @@
+{
+  "*.{js,jsx,less,md,json}": [
+    "prettier --write"
+  ],
+  "*.js?(x)": [
+    "eslint --quiet"
+  ],
+  "*.(le|sass|c)ss": [
+    "stylelint"
+  ]
+}
